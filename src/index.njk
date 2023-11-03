@@ -1,7 +1,7 @@
 {% extends '_templates/base.njk' %}
 
 {% block page_title %}Capt. McGillicutty's Ship's Log{% endblock %}
-
+{% block page_description %}Pirate Cove{% endblock %}
 {% block content %}
 <div class="container">
 <div class="row">
@@ -12,6 +12,7 @@
 </div>
 {% for blog in blog.blogs %}
 <h2><a href="blog/{{ blog.slug }}.html">{{ blog.headline }}</a></h2> 
+<p> {{blog.date}} </p> 
 {% endfor %}
 </div>
 
